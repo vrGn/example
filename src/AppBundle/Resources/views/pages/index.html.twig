@@ -1,0 +1,27 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Example{% endblock %}
+
+{% block body %}
+
+<form action="{{ url('registration') }}" method="POST">
+    <div class="calc-wrap">
+        <div class="amount-slider">
+            <div class="calc-v">
+                <label for="slider-amount">Amount</label>
+                <input type="range" id="slider-amount" name="amount" value="125451">
+            </div>
+        </div>
+        <div class="term-slider">
+            <div class="calc-v">
+                <label for="slider-date">Term</label>
+                <input type="range" id="slider-date" name="term" value="45">
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <button class="yellow-btn" type="submit">Submit</button>
+</form>
+
+{% endblock %}

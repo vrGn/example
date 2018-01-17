@@ -1,0 +1,46 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Example{% endblock %}
+
+{% block body %}
+
+    <section class="sc_13">
+            <div class="cont">
+                <h1>Registration</h1>
+
+                <div class="registration">
+                    {{ form_start(exampleForm, {'attr': {'id': 'applyForm', 'novalidate': 'novalidate'}}) }}
+
+                       {% block form_row %}
+                           <div class="form-group">
+                               {{ form_label(exampleForm.last_name) }}
+                               {{ form_widget(exampleForm.last_name) }}
+                               {{ form_errors(exampleForm.last_name) }}
+                           </div>
+                          <div class="form-group">
+                              {{ form_label(exampleForm.first_name) }}
+                              {{ form_widget(exampleForm.first_name) }}
+                              {{ form_errors(exampleForm.first_name) }}
+                          </div>
+                          <div class="form-group">
+                              {{ form_label(exampleForm.middle_name) }}
+                              {{ form_widget(exampleForm.middle_name) }}
+                              {{ form_errors(exampleForm.middle_name) }}
+                          </div>
+                          <div class="form-group">
+                              {{ form_label(exampleForm.email_address) }}
+                              {{ form_widget(exampleForm.email_address) }}
+                              {{ form_errors(exampleForm.email_address) }}
+                          </div>
+
+                          <div class="form-group">
+                               {{ form_widget(exampleForm.save, {'attr': {'class': 'yellow-btn'}, 'label': 'Submit'}) }}
+                          </div>
+                       {% endblock form_row %}
+
+                   {{ form_end(exampleForm) }}
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
